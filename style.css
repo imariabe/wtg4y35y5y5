@@ -1,0 +1,424 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Initial styling for the header */
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    z-index: 1000;
+    background-color: transparent; /* Initial transparent background */
+    box-shadow: none; /* No shadow initially */
+}
+
+/* Styles for the header when scrolled */
+#main-header.scrolled {
+    background-color: #007bff; /* Change background color when scrolled */
+    padding: 10px 20px; /* Reduce padding when scrolled */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for effect */
+}
+
+/* Navigation styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d18d28;
+}
+
+.logo img{
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Hide the nav links on mobile */
+    .nav-links {
+        display: none;
+    }
+
+    /* Show the hamburger menu */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Adjust header styling for mobile */
+    #main-header {
+        padding: 10px 20px;
+        background-color: #007bff;
+    }
+}
+
+
+
+/* Hero Section */
+.hero {
+    background: url('images/hero section.jpg') no-repeat center center/cover; /* Full-width background image */
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    text-align: center; /* Center text */
+    color: white; /* White text for better contrast */
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+.hero h1 {
+    font-size: 48px; /* Large font size for the main heading */
+    font-weight: 700; /* Bold font weight */
+    margin-bottom: 20px; /* Space below heading */
+    text-transform: uppercase; /* Uppercase text */
+}
+
+.hero p {
+    font-size: 20px; /* Medium font size for subheading */
+    margin-bottom: 40px; /* Space below subheading */
+}
+
+.hero .btn {
+    padding: 12px 30px; /* Padding for the button */
+    background-color: #f57c00; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    text-transform: uppercase; /* Uppercase text on button */
+    text-decoration: none; /* No underline */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.hero .btn:hover {
+    background-color: #a9e600dc; /* Darker color on hover */
+}
+
+/* Responsive Hero Section */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px; /* Adjust heading size for smaller screens */
+    }
+
+    .hero p {
+        font-size: 18px; /* Adjust subheading size for smaller screens */
+    }
+
+    .hero .btn {
+        font-size: 14px; /* Adjust button size for smaller screens */
+        padding: 10px 20px; /* Adjust button padding for smaller screens */
+    }
+}
+
+
+
+
+.COLOS{
+    color: white;
+    margin-left: 80px;
+    margin-top: -29px;
+}
+
+
+
+
+/* General Section Styling */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Welcome Section */
+.welcome-section {
+    background-color: #f0f4f8; /* Light Blue-Gray */
+    color: #333;
+}
+
+.welcome-section h2 {
+    font-size: 36px;
+    color: #2b5876; /* Soft Dark Blue */
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    color: #4b515a; /* Slightly Darker Gray */
+    margin-bottom: 30px;
+}
+
+.welcome-section .btn {
+    padding: 12px 30px;
+    background-color: #f57c00; /* Bright Orange */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.welcome-section .btn:hover {
+    background-color: #e66900; /* Darker Orange */
+}
+
+/* General styling for the section */
+.service-broadcast-section {
+    padding: 20px 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.service-broadcast-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 48%; /* Default: 48% for desktop */
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.service-card-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service-card-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.service-card-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styling for mobile */
+@media screen and (max-width: 768px) {
+    .service-broadcast-grid {
+        flex-direction: column;
+    }
+
+    .service-card {
+        width: 100%; /* Stack cards vertically in mobile view */
+        margin-bottom: 20px; /* Add space between stacked cards */
+    }
+
+    .service-card-image img {
+        height: auto;
+        object-fit: contain;
+    }
+
+    .service-card-content h2 {
+        font-size: 1.3rem; /* Slightly smaller heading for mobile */
+    }
+
+    .service-card-content p {
+        font-size: 0.95rem; /* Slightly smaller text for mobile */
+    }
+
+    .btn {
+        width: 100%; /* Make the button full width for easier tapping on mobile */
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .service-card-content h2 {
+        font-size: 1.2rem; /* Further adjust heading size for very small screens */
+    }
+
+    .service-card-content p {
+        font-size: 0.9rem; /* Further adjust paragraph size for small screens */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+}
+
+
+
+/* Events Section */
+.events-section {
+    background-color: #2b5876; /* Soft Dark Blue */
+    color: white;
+}
+
+.events-section h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.event-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.event-item {
+    background-color: #f0f4f8; /* Light Blue-Gray */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+    color: #333;
+}
+
+.event-item h3 {
+    font-size: 24px;
+    color: #2b5876; /* Soft Dark Blue */
+    margin-bottom: 10px;
+}
+
+.event-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+.event-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Donation Section */
+.donation-section {
+    background-color: #ff6b6b; /* Bright Red-Pink */
+    color: white;
+}
+
+.donation-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.donation-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.donation-section a.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #fff;
+    color: #ff6b6b; /* Bright Red-Pink */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.donation-section a.btn:hover {
+    background-color: #ffc1c1; /* Lighter Red-Pink */
+}
+
